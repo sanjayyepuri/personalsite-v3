@@ -7,10 +7,8 @@ const Navbar = () =>
 				<Heading sx={{
 					fontWeight: "bold",
 					fontSize: 6,
-				}}> <Text sx={{color: "grey"}}>Sai</Text> Sanjay Yepuri </Heading>
+				}}> <Text sx={{color: "blue"}}>Sai</Text> Sanjay Yepuri </Heading>
 			</Flex>
 	</Container>
 
-
 export default Navbar
-

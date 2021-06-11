@@ -88,6 +88,31 @@ const Footer = () =>
 				</Box>
 			</Column>
 
+			<Column start={[4, 3, 5, 5]} width={[2, 2, 3, 3]}
+				sx={{
+					display: "flex",
+					alignItems: ["flex-start", "flex-start", "flex-end"]
+				}}>
+				<Box sx={{
+					bottom: "0px",
+					borderStyle: "solid",
+					borderColor: "muted",
+					borderWidth: "0px",
+					borderTopWidth: "1px",
+					pt: [2]
+				}}>
+					<Box sx={{
+						color: 'secondary',
+						fontSize: [1, 1, 1, 2],
+						fontFamily: "mono",
+						letterSpacing: "mono"
+					}}>
+						Resume
+					</Box>
+
+				</Box>
+			</Column>
+
 		</Row>
 	</Container>
 
