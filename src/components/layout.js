@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Box, Flex, Heading } from "theme-ui"
+import { Box, Container, Flex, Heading } from "theme-ui"
 import { Dimmer, FadeIn } from "@carbonplan/components"
 
 import Navbar from "./nav"
@@ -53,7 +53,7 @@ const Layout = ({ children }) =>
 		</Header>
 
 		<Main>
-			<FadeIn duration={250}>{ children }</FadeIn>
+			<FadeIn duration={250}><Container>{ children }</Container></FadeIn>
 		</Main>
 
 		<Footer>

@@ -1,17 +1,34 @@
 import { graphql } from "gatsby"
 import React from "react"
 
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Container } from "theme-ui"
+import Layout from "../components/layout"
+import { Box } from "theme-ui"
+import { Column, Row } from "@carbonplan/components"
+
+
 
 const Post = ({ data }) => {
-	const post = data.blog.posts[0]
+  const post = data.blog.posts[0]
 
   return (
-    <Container>
-      <h2>{ post.frontmatter.title }</h2>
-			<MDXRenderer>{post.body}</MDXRenderer>
-    </Container>
+    <Layout>
+      <Row sx={{ mb: [8, 8, 9, 10] }}>
+        <Column start={[1, 2, 3, 3]} width={[6, 7]}>
+          <Box as="h1" variant="styles.h1" sx={{
+            mt: [5, 6, 7, 8],
+            mb: [5, 6, 7, 8]
+          }}>
+            {post.frontmatter.title}
+          </Box>
+          <MDXProvider>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </MDXProvider>
+        </Column>
+
+      </Row>
+    </Layout>
   )
 }
 
