@@ -17,7 +17,7 @@ const Navbar = () => (
           <Heading
             sx={{
               fontWeight: "bold",
-              fontSize: 6,
+              fontSize: [5, 6],
             }}
           >
             {" "}
@@ -30,7 +30,7 @@ const Navbar = () => (
         </Box>
       </Column>
     </Row>
-    <Box py={3}>
+    <Box mt={[1, 3]} mb={[3]}>
       <Text sx={{ letterSpacing: "smallcaps" }}>
         MATH, CODE, AND OTHER THINGS.
       </Text>

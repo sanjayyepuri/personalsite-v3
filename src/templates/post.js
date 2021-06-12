@@ -41,7 +41,7 @@ const Post = ({ data }) => {
           </MDXProvider>
         </Column>
 
-				<Column start={[2, 8, 10, 10]} width={[2, 2, 2, 2]}>
+				<Column start={[1, 8, 10, 10]} width={[2, 2, 2, 2]}>
 					<Box sx={{
             mt: [5, 6, 7, 8],
             mb: [1, 6, 7, 8],
@@ -52,9 +52,9 @@ const Post = ({ data }) => {
 							fontSpacing: "mono",
 							fontSize: "3"
 						}}>
-							{ post.frontmatter.author }
+							{ post.frontmatter.author.toUpperCase() }
 							<br />
-							{ new Date(post.frontmatter.date).toDateString() }
+							{ new Date(post.frontmatter.date).toDateString().toUpperCase() }
 						</Text>
 					</Box>
 				</Column>
