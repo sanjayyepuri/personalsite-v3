@@ -87,7 +87,7 @@ const Footer = () => (
               letterSpacing: "mono",
             }}
           >
-            (c) Sanjay Yepuri
+            (c) SANJAY YEPURI
           </Box>
         </Box>
       </Column>
