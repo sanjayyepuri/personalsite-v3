@@ -1,11 +1,13 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
-import { Box } from "theme-ui"
-import { Column, Row } from "@carbonplan/components"
+import { Box, Text } from "theme-ui"
+import { Column, Row, Buttons } from "@carbonplan/components"
+
+const { BackButton } = Buttons
 
 
 
@@ -15,6 +17,16 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <Row sx={{ mb: [8, 8, 9, 10] }}>
+				<Column start={[1, 1, 1, 1]} width={[1, 1, 2, 2]}>
+					<Box sx={{
+            mt: [6, 7, 8, 9],
+            mb: [5, 6, 7, 8]
+          }}>
+						<Link to={"/"}>
+							<BackButton />
+						</Link>
+					</Box>
+				</Column>
         <Column start={[1, 2, 3, 3]} width={[6, 7]}>
           <Box as="h1" variant="styles.h1" sx={{
             mt: [5, 6, 7, 8],

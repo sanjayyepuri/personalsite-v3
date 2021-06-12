@@ -1,14 +1,41 @@
-import React from "react"
-import { Container, Heading, Flex, Text } from "theme-ui"
+import React from "react";
+import { Heading, Box, Text } from "theme-ui";
 
-const Navbar = () =>
-	<Container>
-			<Flex px={3} py={3}>
-				<Heading sx={{
-					fontWeight: "bold",
-					fontSize: 6,
-				}}> <Text sx={{color: "blue"}}>Sai</Text> Sanjay Yepuri </Heading>
-			</Flex>
-	</Container>
+import { Row, Column } from "@carbonplan/components";
+import { Link } from "gatsby";
 
-export default Navbar
+const Navbar = () => (
+  <Box>
+    <Row
+      sx={{
+        mt: 3,
+        pb: 3,
+      }}
+    >
+      <Column start={[1]} width={[6]}>
+        <Box>
+          <Heading
+            sx={{
+              fontWeight: "bold",
+              fontSize: 6,
+            }}
+          >
+            {" "}
+            <Link to={"/"}>
+              <Text sx={{ color: "primary" }}>
+                <Text sx={{ color: "blue" }}>Sai</Text> Sanjay Yepuri{" "}
+              </Text>
+            </Link>
+          </Heading>
+        </Box>
+      </Column>
+    </Row>
+    <Box py={3}>
+      <Text sx={{ letterSpacing: "smallcaps" }}>
+        MATH, CODE, AND OTHER THINGS.
+      </Text>
+    </Box>
+  </Box>
+);
+
+export default Navbar;

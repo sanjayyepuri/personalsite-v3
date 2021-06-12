@@ -1,67 +1,101 @@
-import React from "react"
+import React from "react";
 
-import { Box, Container, Flex, Heading } from "theme-ui"
-import { Dimmer, FadeIn } from "@carbonplan/components"
+import { Box, Container, Flex, Heading } from "theme-ui";
+import { Dimmer, FadeIn, Guide } from "@carbonplan/components";
 
-import Navbar from "./nav"
-import Footerbar from "./footer"
+import Navbar from "./nav";
+import Footerbar from "./footer";
 
-const Header = ({ children }) =>
-	<Box as="header"
-		sx={{
-			width: "100%",
-			position: "sticky",
-			top: 0,
-			bg: "background"
-		}}> {children} </Box>
+const Header = ({ children }) => (
+  <Box
+    as="header"
+    sx={{
+      width: "100%",
+      position: "sticky",
+      top: 0,
+      bg: "background",
+			bottom: "0px",
+      borderStyle: "solid",
+      borderColor: "muted",
+      borderWidth: "0px",
+      borderBottomWidth: "1px",
+			zIndex: 2000
+    }}
+  >
+    {" "}
+    {children}{" "}
+  </Box>
+);
 
-const Main = ({children}) =>
-	<Box as="main"
-		sx={{
-			width: "100%",
-			flex: "1 1 auto"
-		}}> {children} </Box>
+const Main = ({ children }) => (
+  <Box
+    sx={{
+      width: "100%",
+      flex: "1 1 auto",
+    }}
+  >
+    {" "}
+    {children}{" "}
+  </Box>
+);
 
+const Footer = ({ children }) => (
+  <Box
+    as="footer"
+    sx={{
+      width: "100%",
+      bottom: "0px",
+      borderStyle: "solid",
+      borderColor: "muted",
+      borderWidth: "0px",
+      borderTopWidth: "1px",
+    }}
+  >
+    {" "}
+    {children}{" "}
+  </Box>
+);
 
-const Footer = ({ children }) =>
-	<Box as="footer"
-		sx={{
-			width: "100%",
-		}}> {children} </Box>
+const DimmerContainer = () => (
+  <Box
+    sx={{
+      display: ["none", "none", "initial", "initial"],
+      position: ["fixed"],
+      right: [13],
+      bottom: [17, 17, 15, 16],
+    }}
+  >
+    <Dimmer />
+  </Box>
+);
 
+const Layout = ({ children }) => (
+  <Flex
+    sx={{
+      flexDirection: "column",
+      minHeight: "100vh",
+    }}
+  >
+    <Guide />
 
-const DimmerContainer = () =>
-	<Box
-		sx={{
-			display: ["none", "none", "initial", "initial"],
-			position: ["fixed"],
-			right: [13],
-			bottom: [17, 17, 15, 16],
-		}}>
-		<Dimmer />
-	</Box>
+    <Header>
+      <Container>
+        <Navbar />
+      </Container>
+    </Header>
 
-const Layout = ({ children }) =>
-	<Flex
-		sx={{
-			flexDirection: "column",
-			minHeight: "100vh",
-		}}>
+    <Main>
+      <Container>
+        <FadeIn duration={250}>{children}</FadeIn>
+      </Container>
+    </Main>
 
-		<Header>
-			<Navbar />
-		</Header>
+    <Footer>
+      <Footerbar />
+    </Footer>
 
-		<Main>
-			<FadeIn duration={250}><Container>{ children }</Container></FadeIn>
-		</Main>
+    <DimmerContainer />
+  </Flex>
+);
 
-		<Footer>
-			<Footerbar />
-		</Footer>
-
-		<DimmerContainer />
-	</Flex>
-
-
-export default Layout
+export default Layout;

@@ -20,14 +20,7 @@ const { ArrowButton } = Buttons
 const IndexPage = () => {
   return (
     <Layout>
-      <Container>
-          <Container>
-            <Box py={3}>
-            <Text sx={{ letterSpacing: "smallcaps" }}>MATH, CODE, AND OTHER THINGS.</Text>
-            </Box>
-            <PostList />
-          </Container>
-      </Container>
+      <PostList />
     </Layout>
   )
 }

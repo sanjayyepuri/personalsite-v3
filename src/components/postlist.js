@@ -1,30 +1,42 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
-import { Buttons } from "@carbonplan/components";
+import { Buttons, Row, Column } from "@carbonplan/components";
 import { Box, Grid, Text } from "theme-ui";
 
 const { ArrowButton } = Buttons;
 
-const PostPreview = ({ post }) => (
+const PostPreview = ({ post, divider = true}) => (
   <Box>
-    <ArrowButton label={post.frontmatter.title} size="lg" />
-    <Grid gap={2} columns={[1, "1fr 1fr"]}>
-      <Text>
-        { post.excerpt }
-      </Text>
-      <Text
-        sx={{
-          mx: [0, 3],
-          letterSpacing: "smallcaps",
-          fontFamily: "mono",
-          fontSize: 1,
-        }}
-      >
-        { post.frontmatter.date }
-      </Text>
-    </Grid>
-    <hr sx={{ color: "muted" }} />
+    <Row mb={[1, 2]}>
+      <Column start={[1, 1, 2, 2]} width={[6, 6, 8, 12]}>
+        <Link to={post.slug}>
+          <ArrowButton label={post.frontmatter.title} size="lg" />
+        </Link>
+      </Column>
+    </Row>
+    <Row>
+      <Column start={[1, 1, 2, 2]} width={[5, 5]}>
+        <Text>{post.excerpt}</Text>
+      </Column>
+      <Column start={[1, 6, 7, 7]} width={[3, 3]}>
+        <Text
+          sx={{
+            letterSpacing: "smallcaps",
+            fontFamily: "mono",
+            fontSize: 1,
+          }}
+        >
+          {post.frontmatter.date}
+        </Text>
+      </Column>
+    </Row>
+    <Row>
+      <Column start={[1, 1, 2, 2]} width={[6, 8, 8, 8]}>
+        { divider && <hr /> }
+      </Column>
+    </Row>
+
   </Box>
 );
 
@@ -34,18 +46,23 @@ const PostList = () => {
       blog: allMdx {
         posts: nodes {
           excerpt
+          slug
           frontmatter {
             title
-						date
+            date
           }
         }
       }
     }
   `);
 
+  const posts = data.blog.posts.slice(0, -1);
+  const lastPost = data.blog.posts.slice(-1)
+
   return (
-    <Box>
-      {data && data.blog.posts.map((post) => <PostPreview post={post} />)}
+    <Box mt={[3, 5]} mb={[3, 5]}>
+       { posts.map((post) => <PostPreview post={post} />)}
+       { lastPost.length > 0 && <PostPreview post={lastPost[0]} divider={false}/>}
     </Box>
   );
 };
