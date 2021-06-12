@@ -17,7 +17,7 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <Row sx={{ mb: [8, 8, 9, 10] }}>
-				<Column start={[1, 1, 1, 1]} width={[1, 1, 2, 2]}>
+				<Column start={[1, 1, 1, 1]} width={[6, 6, 2, 2]}>
 					<Box sx={{
             mt: [6, 7, 8, 9],
             mb: [5, 6, 7, 8]
