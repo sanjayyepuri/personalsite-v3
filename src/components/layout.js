@@ -5,6 +5,7 @@ import { Dimmer, FadeIn, Guide } from "@carbonplan/components";
 
 import Navbar from "./nav";
 import Footerbar from "./footer";
+import Metadata from "./metadata";
 
 const Header = ({ children }) => (
   <Box
@@ -69,7 +70,7 @@ const DimmerContainer = () => (
   </Box>
 );
 
-const Layout = ({ children }) => (
+const Layout = ({ mode, children }) => (
   <Flex
     sx={{
       flexDirection: "column",
@@ -93,7 +94,7 @@ const Layout = ({ children }) => (
     <Footer>
       <Footerbar />
     </Footer>
-
+    <Metadata mode={mode}/>
     <DimmerContainer />
   </Flex>
 );

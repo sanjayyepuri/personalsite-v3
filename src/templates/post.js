@@ -15,7 +15,7 @@ const Post = ({ data }) => {
   const post = data.blog.posts[0]
 
   return (
-    <Layout>
+    <Layout mode="scroll">
       <Row sx={{ mb: [8, 8, 9, 10] }}>
 				<Column start={[1, 1, 1, 1]} width={[2]}>
 					<Box sx={{

@@ -19,7 +19,7 @@ const { ArrowButton } = Buttons
 // markup
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout mode="mouse">
       <PostList />
     </Layout>
   )
