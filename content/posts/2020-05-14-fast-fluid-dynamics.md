@@ -2,6 +2,7 @@
 title: Fast Fluid Dynamics
 date: 2020-05-14
 author: Sanjay Yepuri & Helen Zhou
+type: post
 ---
 
 Fluids can be found all around us; everything from a glass of water to a wisp of smoke is governed by the laws of fluid dynamics. These laws are ingrained in us when we watch how a river flows or ocean waves crash. As a result, efficient and accurate fluid simulation is crucial for animating games and movies.

@@ -43,7 +43,10 @@ const PostPreview = ({ post, divider = true}) => (
 const PostList = () => {
   const data = useStaticQuery(graphql`
     {
-      blog: allMdx(sort: {fields:frontmatter___date, order: DESC}) {
+      blog: allMdx(
+        sort: {fields:frontmatter___date, order: DESC}
+        filter: {frontmatter: {type: {eq: "post"}}}
+      ) {
         posts: nodes {
           excerpt
           slug

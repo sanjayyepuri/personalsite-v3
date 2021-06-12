@@ -2,6 +2,7 @@
 title: More on Random Variables
 date: 2020-01-08
 author: Sanjay Yepuri
+type: post
 ---
 
 A *random variable* is a value which we do not know yet or we are uncertain of. They are the fundamental unit of statistics and are used anytime we want to predict a value. Having a good understanding of their properties makes it easier to model situations with statistics. In general, we know the values that a random variable could take on, and for each value, the probability of that value occurring.

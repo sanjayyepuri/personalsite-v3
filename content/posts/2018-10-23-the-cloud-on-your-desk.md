@@ -2,6 +2,7 @@
 title: The Cloud on Your Desk
 date: 2018-10-23
 author: Sanjay Yepuri
+type: post
 ---
 A year ago at a hackathon an engineer had demoed what he called the "cloud on your desk." Essentially it was  5 Raspberry Pis that were physically attached together on a frame with a network switch. Running on them was a software called OpenStack, a system designed to control compute, storage, and networking resources in large data centers that would be used by cloud applications. I found the compact device extremely interesting and felt that this was something I could do myself. But it wasn’t until earlier this year that I took up the challenge to build my own cluster.
 
