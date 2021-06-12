@@ -27,7 +27,7 @@ const PostPreview = ({ post, divider = true}) => (
             fontSize: 1,
           }}
         >
-          {post.frontmatter.date}
+          {new Date(post.frontmatter.date).toDateString()}
         </Text>
       </Column>
     </Row>
@@ -43,7 +43,7 @@ const PostPreview = ({ post, divider = true}) => (
 const PostList = () => {
   const data = useStaticQuery(graphql`
     {
-      blog: allMdx {
+      blog: allMdx(sort: {fields:frontmatter___date, order: DESC}) {
         posts: nodes {
           excerpt
           slug

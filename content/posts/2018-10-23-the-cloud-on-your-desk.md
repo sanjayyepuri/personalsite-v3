@@ -1,6 +1,7 @@
 ---
 title: The Cloud on Your Desk
 date: 2018-10-23
+author: Sanjay Yepuri
 ---
 > Building a Cluster of Raspberry Pis
 

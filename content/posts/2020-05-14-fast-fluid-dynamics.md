@@ -1,16 +1,17 @@
 ---
 title: Fast Fluid Dynamics
 date: 2020-05-14
+author: Sanjay Yepuri & Helen Zhou
 ---
 
 Fluids can be found all around us; everything from a glass of water to a wisp of smoke is governed by the laws of fluid dynamics. These laws are ingrained in us when we watch how a river flows or ocean waves crash. As a result, efficient and accurate fluid simulation is crucial for animating games and movies.
 For our final project we implemented an algorithm called Fast Fluid Dynamics (FFD) using Rust and WebGL. This is a method for creating real-time, stable fluid simulations that run entirely on the GPU based on Jos Stam’s paper, “Stable Fluids” (Stam 1999). 
 
-<!-- In FFD there are a few simplifying assumptions that are made. First, we assume that fluids are incompressible. This means that the volume of fluid in a given region in space (density) remains constant over time. Second, we assume that the fluid is homogenous or density is constant over space. Given these two assumptions we can apply the Navier-Stokes Equations for Incompressible Flow to model the state of the fluid over time.
+In FFD there are a few simplifying assumptions that are made. First, we assume that fluids are incompressible. This means that the volume of fluid in a given region in space (density) remains constant over time. Second, we assume that the fluid is homogenous or density is constant over space. Given these two assumptions we can apply the Navier-Stokes Equations for Incompressible Flow to model the state of the fluid over time.
 
 Before we discuss the details here is a [demo](/fluids). You can find the code for it on my github [here](https://github.com/sanjayyepuri/fluids).
 
-## Navier-Stokes Equations for Incompressible Flow
+### Navier-Stokes Equations for Incompressible Flow
 Fluids are mathematically represented as vector fields; the vector field $$\boldsymbol{u}(p, t)$$ represents the velocity of the fluid at the point $$p$$ at time $$t$$. Now, in order for the fluid created by $$\boldsymbol{u}$$ to resemble one in our world the vector field must satisfy the Navier-Stokes equations for Incompressible Flow.
 
 $$
@@ -26,12 +27,12 @@ We won’t go into great depth how the equations work; however, we will discuss 
 
 Fast Fluid Dynamics solves for these terms analytically given an initial vector field and computes the vector field at the next time step. In our implementation we simulate ink in our fluid; so, once we have the new vector field we use it to advect the ink to compute the next frame.
 
-## Fast Fluid Dynamics Algorithm
+### Fast Fluid Dynamics Algorithm
 On a computer we represent a fluid as a 2D array of velocity vectors (or in the case of GPU, we use a texture). This representation is a discretization of the velocity vector field, $$\boldsymbol{u}$$. FFD uses this as an input and computes a new vector field by applying a series of passes over the original. Note that each pass specified by the algorithm iterates over each position of the 2D array; furthermore, each computation does not depend on a previously computed value. Therefore, they easily lend themselves to be executed on a GPU as a shader program.
 
 In our implementation, these passes are fragment shaders written in GLSL. The velocity vector field is stored as a floating point RGB texture that is passed as a uniform to each shader program; the new vector field is then rendered to another texture. In order to be efficient, each pass has two textures which alternate as input and output. After we output the final velocity field, we advect the color field which is ultimately rendered to the screen.
 
-<img class="no-shadow" src="/assets/fluid-shader-pipeline.png">
+<!-- <img class="no-shadow" src="/assets/fluid-shader-pipeline.png"> -->
 
 ### Shader Programs
 
@@ -49,6 +50,6 @@ The second add-on we implemented is vorticity confinement. Due to the resolution
 
 Now that the final velocity vector field is computed, we apply the advection program to a color texture. This produces the image that gets rendered to the window.
 
-## Limitations and Future Work
+### Limitations and Future Work
 
-This simulation can be used to simulate liquids and gasses. In order to get more realistic simulation we can add convection and buoyancy force. Furthermore, we can to simulate smoke and clouds the addition of a gravitational pull to smoke the buoyancy force using a smoke density texture. -->
+This simulation can be used to simulate liquids and gasses. In order to get more realistic simulation we can add convection and buoyancy force. Furthermore, we can to simulate smoke and clouds the addition of a gravitational pull to smoke the buoyancy force using a smoke density texture.
