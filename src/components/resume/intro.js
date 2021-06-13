@@ -1,22 +1,45 @@
 import React from "react";
 import { Box, Text, Heading } from "theme-ui";
-import { Row, Column } from "@carbonplan/components";
+import { Row, Column, Buttons, Arrow } from "@carbonplan/components";
+import { Link } from "gatsby";
+
+const { ArrowButton } = Buttons;
 
 const Intro = () => (
-  <Box mt={[2, 5]} mb={[2, 5]}>
+  <Box
+    sx={{
+      // height: "90vh",
+    }}
+    mb={[5, 8]}
+  >
+    <Box
+      sx={{
+        position: "absolute",
+        left: "0px",
+        // bg: "muted",
+        width: "100%",
+        height: ["0vh", "10vh", "10vh", "10vh"],
+      }}
+    />
+    <Box
+      sx={{
+        height: ["0vh", "10vh", "10vh", "10vh"],
+      }}
+    />
     <Row>
       <Column start={[1, 1, 2, 2]} width={[4, 2, 3, 2]}>
         <Heading
           sx={{
             letterSpacing: "heading",
-            fontSize: [6, 6, 8, 9],
+            fontSize: [6, 8, 8, 9],
+            color: "purple",
           }}
         >
           Hello, World!
         </Heading>
       </Column>
 
-      <Column start={[1, 3, 5, 5]} width={[5, 4, 5, 5]}>
+      <Column start={[1, 1, 2, 2]} width={[5, 4, 5, 5]}>
         <Box
           sx={{
             pt: [2, 2],
@@ -24,12 +47,31 @@ const Intro = () => (
           }}
         >
           <Text>
-            Hi, I’m a student at the University of Texas at Austin, majoring in
+            Hi, I’m a new grad from the University of Texas at Austin. I majored in
             Computer Science and Mathematics. Feel free to shoot me an email if
             you have anything to say, interesting articles, job opportunities,
             etc.
           </Text>
+
+          <Box mt={[4]}>
+            {/* <ArrowButton size="md" label="About Me" /> */}
+            <Link to={"/blog"}>
+              <ArrowButton sx={{color: "grey"}} size="md" label="Blog" />
+            </Link>
+          </Box>
         </Box>
+      </Column>
+
+      <Column start={[6, 7, 9, 9]} width={[1]} sx={{position: "relative"}}>
+        <Arrow
+          sx={{
+            position: "absolute",
+            bottom: "0px",
+            right: "0px",
+            transform: "rotate(135deg)",
+            fill: "red"
+          }}
+        />
       </Column>
     </Row>
   </Box>

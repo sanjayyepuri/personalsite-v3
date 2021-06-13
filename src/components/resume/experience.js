@@ -96,12 +96,13 @@ const Experience = () => {
   `);
 
   return (
-    <Box mt={[3, 3, 6, 6]} mb={[3, 2, 6, 6]}>
+    <Box id="experience" mt={[3, 3, 6, 6]} mb={[3, 2, 6, 6]}>
       <Row mb={[1, 2]}>
         <Column start={[1, 1, 2, 2]} width={[3]}>
           <Heading
             sx={{
               fontSize: [4, 5],
+              color: "blue",
             }}
           >
             Experience
