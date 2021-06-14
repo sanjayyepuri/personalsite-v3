@@ -26,7 +26,7 @@ const Intro = () => (
         height: ["0vh", "10vh", "10vh", "10vh"],
       }}
     />
-    <Row>
+    <Row sx={{mt: [2,2]}}>
       <Column start={[1, 1, 2, 2]} width={[4, 2, 3, 2]}>
         <Heading
           sx={{

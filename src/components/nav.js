@@ -29,7 +29,7 @@ const Navbar = () => (
       <Heading
         sx={{
           fontWeight: "bold",
-          fontSize: [4, 5, 5, 6],
+          fontSize: [5, 5, 5, 6],
         }}
       >
         <Link to={"/"}>
@@ -39,12 +39,13 @@ const Navbar = () => (
         </Link>
       </Heading>
       <Box sx={{ mx: "auto" }}></Box>
-
-      <Navlink to="/"> Home </Navlink>
-      <Navlink to="/blog"> Blog </Navlink>
-      <Navlink to="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view">
-        Resume
-      </Navlink>
+      <Box>
+        <Navlink to="/"> Home </Navlink>
+        <Navlink to="/blog"> Blog </Navlink>
+        <Navlink to="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view">
+          Resume
+        </Navlink>
+      </Box>
     </Flex>
 
     <Box mt={[3, 3]} mb={[2]}>

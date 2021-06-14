@@ -39,7 +39,7 @@ const Job = ({ job }) => {
             </Box>
           </Column>
 
-          <Column start={[1, 5, 6, 6]} width={[3, 3, 3, 2]}>
+          <Column start={[1, 5, 6, 6]} width={[6, 3, 3, 2]}>
             <Box sx={{ float: ["inherit", "right", "right", "right"] }}>
               <Box
                 sx={{

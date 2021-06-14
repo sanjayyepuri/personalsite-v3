@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@carbonplan/components": "^7.8.3",
@@ -35,5 +36,8 @@
     "remark-html-katex": "^3.0.0",
     "remark-math": "^3.0.1",
     "theme-ui": "^0.9.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.0"
   }
 }
