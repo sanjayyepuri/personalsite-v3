@@ -12,7 +12,7 @@ const Navlink = ({ children, to, external = false }) => {
   );
 
   return (
-    <Box sx={{ my: "auto" }}>
+    <Box sx={{ my: "auto", pb:[2, 0, 0, 0] }}>
       {external ? <a href={to}> {button} </a> : <Link to={to}> {button} </Link>}
     </Box>
   );
@@ -41,15 +41,15 @@ const Navbar = () => (
       <Box sx={{ mx: "auto" }}></Box>
       <Box>
         <Navlink to="/"> Home </Navlink>
-        <Navlink to="/blog"> Blog </Navlink>
+        <Navlink to="/about"> About </Navlink>
         <Navlink to="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view">
           Resume
         </Navlink>
       </Box>
     </Flex>
 
-    <Box mt={[3, 3]} mb={[2]}>
-      <Text sx={{ letterSpacing: "smallcaps" }}>
+    <Box mt={[1, 3, 3, 3]} mb={[1, 2, 2, 2]}>
+      <Text sx={{ fontSize: [1, null, null, null], letterSpacing: "smallcaps" }}>
         MATH, CODE, AND OTHER THINGS.
       </Text>
     </Box>

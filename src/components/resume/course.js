@@ -21,7 +21,7 @@ const CourseList = [
 ];
 
 const CourseWork = () => (
-  <Box id="coursework" mt={[3, 2, 6, 6]} mb={[3, 2, 6, 6]}>
+  <Box id="coursework" mt={[3, 2, 6, 6]} mb={[3, 3, 6, 6]}>
     <Row mb={[1, 2]}>
       <Column start={[1, 1, 2, 2]} width={[3]}>
         <Heading

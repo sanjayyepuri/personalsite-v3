@@ -10,7 +10,7 @@ const PostPreview = ({ post, divider = true}) => (
   <Box>
     <Row mb={[1, 2]}>
       <Column start={[1, 1, 2, 2]} width={[6, 6, 8, 12]}>
-        <Link to={post.slug}>
+        <Link to={`/blog/${post.slug}`}>
           <ArrowButton label={post.frontmatter.title} size="lg" />
         </Link>
       </Column>

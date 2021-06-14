@@ -35,7 +35,7 @@ const Intro = () => (
             color: "purple",
           }}
         >
-          Hello, World!
+          Hello!
         </Heading>
       </Column>
 
@@ -47,7 +47,7 @@ const Intro = () => (
           }}
         >
           <Text>
-            Hi, I’m a new grad from the University of Texas at Austin. I majored in
+            I’m a new grad from the University of Texas at Austin. I majored in
             Computer Science and Mathematics. Feel free to shoot me an email if
             you have anything to say, interesting articles, job opportunities,
             etc.
@@ -55,7 +55,7 @@ const Intro = () => (
 
           <Box mt={[4]}>
             {/* <ArrowButton size="md" label="About Me" /> */}
-            <Link to={"/blog"}>
+            <Link to={"/"}>
               <ArrowButton sx={{color: "grey"}} size="md" label="Blog" />
             </Link>
           </Box>
