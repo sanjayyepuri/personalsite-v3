@@ -25,6 +25,7 @@ const PostPreview = ({ post, divider = true}) => (
             letterSpacing: "smallcaps",
             fontFamily: "mono",
             fontSize: 1,
+            textTransform: "uppercase"
           }}
         >
           {new Date(post.frontmatter.date).toDateString()}
