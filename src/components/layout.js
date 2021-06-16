@@ -1,7 +1,9 @@
 import React from "react";
 
-import { Box, Container, Flex, Heading } from "theme-ui";
+import { Box, Container, Flex } from "theme-ui";
 import { Dimmer, FadeIn, Guide } from "@carbonplan/components";
+
+import { Helmet } from "react-helmet";
 
 import Navbar from "./nav";
 import Footerbar from "./footer";
@@ -77,6 +79,11 @@ const Layout = ({ mode, children }) => (
       minHeight: "100vh",
     }}
   >
+    <Helmet htmlAttributes={{ lang: "en-us" }}>
+      <meta charset="utf-8" />
+      <meta name="description" content="Personal blog about math, code and other things" />
+      <title>Sanjay Yepuri</title>
+    </Helmet>
     <Guide />
 
     <Header>

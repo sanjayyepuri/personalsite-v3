@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { Buttons, Row, Column } from "@carbonplan/components";
-import { Box, Grid, Text } from "theme-ui";
+import { Box, Text } from "theme-ui";
 
 const { ArrowButton } = Buttons;
 

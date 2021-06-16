@@ -1,9 +1,7 @@
 import React from "react";
 
-import { Box, Container, Text, Themed } from "theme-ui";
-
-import { Buttons, Column, Links, Row } from "@carbonplan/components";
-import { fontFamily } from "styled-system";
+import { Box, Container, Themed } from "theme-ui";
+import { Buttons, Column, Row } from "@carbonplan/components";
 
 const Label = ({ children }) => (
   <Box

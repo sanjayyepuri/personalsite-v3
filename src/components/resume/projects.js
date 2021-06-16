@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Box, Heading, Text } from "@theme-ui/components";
+import { Box, Heading } from "@theme-ui/components";
 import { Row, Column, Buttons } from "@carbonplan/components";
-import { Themed } from "theme-ui";
 
 const { CalloutButton } = Buttons;
 

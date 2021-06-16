@@ -1,7 +1,7 @@
 import React from "react";
-import { Heading, Box, Text, Themed, Flex } from "theme-ui";
+import { Heading, Box, Text, Flex } from "theme-ui";
 
-import { Row, Column, Buttons } from "@carbonplan/components";
+import { Buttons } from "@carbonplan/components";
 import { Link } from "gatsby";
 
 const { ArrowButton } = Buttons;
