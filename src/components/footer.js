@@ -41,19 +41,19 @@ const Footer = () => (
         <Column start={[1, 1, 2, 2]} width={[3, 3]}>
           <Box>
             <Label> EMAIL </Label>
-            <Themed.a as="a">sanjay@cs.utexas.edu</Themed.a>
+            <Themed.a href="mailto:sanjay@cs.utexas.edu" as="a">sanjay@cs.utexas.edu</Themed.a>
           </Box>
         </Column>
         <Column start={[1, 4, 5, 5]} width={[3, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>GITHUB</Label>
-            <Themed.a>github.com/sanjayyepuri</Themed.a>
+            <Themed.a href="https://github.com/sanjayyepuri">github.com/sanjayyepuri</Themed.a>
           </Box>
         </Column>
         <Column start={[1, 7, 8, 8]} width={[2, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>LINKEDIN</Label>
-            <Themed.a>linkedin.com/in/sanjay-yepuri/</Themed.a>
+            <Themed.a href="https://linkedin.com/in/sanjay-yepuri/">linkedin.com/in/sanjay-yepuri/</Themed.a>
           </Box>
         </Column>
       </Row>
