@@ -51,5 +51,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [
+          "UA-127947585-1"
+        ]
+      }
+    }
   ],
 };
