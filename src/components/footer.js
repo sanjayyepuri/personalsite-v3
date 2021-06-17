@@ -47,13 +47,13 @@ const Footer = () => (
         <Column start={[1, 4, 5, 5]} width={[3, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>GITHUB</Label>
-            <Themed.a href="https://github.com/sanjayyepuri">github.com/sanjayyepuri</Themed.a>
+            <Themed.a href="https://github.com/sanjayyepuri" target="_blank">github.com/sanjayyepuri</Themed.a>
           </Box>
         </Column>
         <Column start={[1, 7, 8, 8]} width={[2, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>LINKEDIN</Label>
-            <Themed.a href="https://linkedin.com/in/sanjay-yepuri/">linkedin.com/in/sanjay-yepuri/</Themed.a>
+            <Themed.a href="https://linkedin.com/in/sanjay-yepuri/" target="_blank">linkedin.com/in/sanjay-yepuri/</Themed.a>
           </Box>
         </Column>
       </Row>

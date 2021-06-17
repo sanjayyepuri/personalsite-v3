@@ -21,7 +21,7 @@ const Projects = () => (
     </Row>
     <Row>
       <Column start={[1, 1, 2, 2]} width={[3]}>
-        <a href="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view">
+        <a href="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view" target="_blank">
           <CalloutButton color="primary" label="Resume">
             Coming Soon... In the meanwhile check out my{" "}
           </CalloutButton>
