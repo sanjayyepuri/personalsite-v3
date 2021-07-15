@@ -9,6 +9,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 const Job = ({ job }) => {
   const [expanded, setExpanded] = React.useState(false);
 
+  const { body, frontmatter } = job;
+
   return (
     <Box>
       <Box

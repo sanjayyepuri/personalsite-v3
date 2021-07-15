@@ -1,9 +1,7 @@
 import React from "react";
 
 import { Box, Heading } from "@theme-ui/components";
-import { Row, Column, Buttons } from "@carbonplan/components";
-
-const { CalloutButton } = Buttons;
+import { Row, Column, Callout } from "@carbonplan/components";
 
 const Projects = () => (
   <Box id="projects" mt={[3, 2, 6, 6]} mb={[3, 2, 6, 6]}>
@@ -21,10 +19,13 @@ const Projects = () => (
     </Row>
     <Row>
       <Column start={[1, 1, 2, 2]} width={[3]}>
-        <a href="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view" target="_blank">
-          <CalloutButton color="primary" label="Resume">
+        <a
+          href="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view"
+          target="_blank"
+        >
+          <Callout color="primary" label="Resume">
             Coming Soon... In the meanwhile check out my{" "}
-          </CalloutButton>
+          </Callout>
         </a>
       </Column>
     </Row>

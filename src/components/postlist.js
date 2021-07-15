@@ -1,17 +1,17 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
-import { Buttons, Row, Column } from "@carbonplan/components";
+import { Row, Column } from "@carbonplan/components";
 import { Box, Text } from "theme-ui";
 
-const { ArrowButton } = Buttons;
+import ArrowButton from "./arrowbutton";
 
-const PostPreview = ({ post, divider = true}) => (
+const PostPreview = ({ post, divider = true }) => (
   <Box>
     <Row mb={[1, 2]}>
       <Column start={[1, 1, 2, 2]} width={[6, 6, 8, 12]}>
         <Link to={`/blog/${post.slug}`}>
-          <ArrowButton label={post.frontmatter.title} size="lg" />
+          <ArrowButton size="lg">{post.frontmatter.title}</ArrowButton>
         </Link>
       </Column>
     </Row>
@@ -25,7 +25,7 @@ const PostPreview = ({ post, divider = true}) => (
             letterSpacing: "smallcaps",
             fontFamily: "mono",
             fontSize: 1,
-            textTransform: "uppercase"
+            textTransform: "uppercase",
           }}
         >
           {new Date(post.frontmatter.date).toDateString()}
@@ -34,10 +34,9 @@ const PostPreview = ({ post, divider = true}) => (
     </Row>
     <Row>
       <Column start={[1, 1, 2, 2]} width={[6, 8, 8, 8]}>
-        { divider && <hr /> }
+        {divider && <hr />}
       </Column>
     </Row>
-
   </Box>
 );
 
@@ -45,15 +44,15 @@ const PostList = () => {
   const data = useStaticQuery(graphql`
     {
       blog: allMdx(
-        sort: {fields:frontmatter___date, order: DESC}
-        filter: {frontmatter: {type: {eq: "post"}}}
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { frontmatter: { type: { eq: "post" } } }
       ) {
         posts: nodes {
-          excerpt
           slug
+          excerpt
           frontmatter {
-            title
             date
+            title
           }
         }
       }
@@ -61,12 +60,16 @@ const PostList = () => {
   `);
 
   const posts = data.blog.posts.slice(0, -1);
-  const lastPost = data.blog.posts.slice(-1)
+  const lastPost = data.blog.posts.slice(-1);
 
   return (
     <Box mt={[3, 5]} mb={[3, 5]}>
-       { posts.map((post) => <PostPreview post={post} />)}
-       { lastPost.length > 0 && <PostPreview post={lastPost[0]} divider={false}/>}
+      {posts.map((post) => (
+        <PostPreview post={post} />
+      ))}
+      {lastPost.length > 0 && (
+        <PostPreview post={lastPost[0]} divider={false} />
+      )}
     </Box>
   );
 };

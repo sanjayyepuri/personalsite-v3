@@ -1,7 +1,9 @@
 import React from "react";
 
 import { Box, Container, Themed } from "theme-ui";
-import { Buttons, Column, Row } from "@carbonplan/components";
+import { Column, Row } from "@carbonplan/components";
+
+import ArrowButton from "./arrowbutton";
 
 const Label = ({ children }) => (
   <Box
@@ -18,13 +20,13 @@ const Label = ({ children }) => (
 
 const CarbonPlan = () => (
   <a href={"https://www.carbonplan.org"}>
-    <Buttons.ArrowButton
-      label="(carbon)plan"
-      fill="green"
-      color="green"
-      size="xs"
-      sx={{ display: "inline-block" }}
-    />
+    <Box as="span" sx={{ display: "inline-block"}}>
+      <ArrowButton color="green" size="xs">
+        <Box as="span" color="green">
+          (carbon)plan
+        </Box>
+      </ArrowButton>
+    </Box>
   </a>
 );
 
@@ -41,19 +43,28 @@ const Footer = () => (
         <Column start={[1, 1, 2, 2]} width={[3, 3]}>
           <Box>
             <Label> EMAIL </Label>
-            <Themed.a href="mailto:sanjay@cs.utexas.edu" as="a">sanjay@cs.utexas.edu</Themed.a>
+            <Themed.a href="mailto:sanjay@cs.utexas.edu" as="a">
+              sanjay@cs.utexas.edu
+            </Themed.a>
           </Box>
         </Column>
         <Column start={[1, 4, 5, 5]} width={[3, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>GITHUB</Label>
-            <Themed.a href="https://github.com/sanjayyepuri" target="_blank">github.com/sanjayyepuri</Themed.a>
+            <Themed.a href="https://github.com/sanjayyepuri" target="_blank">
+              github.com/sanjayyepuri
+            </Themed.a>
           </Box>
         </Column>
         <Column start={[1, 7, 8, 8]} width={[2, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>LINKEDIN</Label>
-            <Themed.a href="https://linkedin.com/in/sanjay-yepuri/" target="_blank">linkedin.com/in/sanjay-yepuri/</Themed.a>
+            <Themed.a
+              href="https://linkedin.com/in/sanjay-yepuri/"
+              target="_blank"
+            >
+              linkedin.com/in/sanjay-yepuri/
+            </Themed.a>
           </Box>
         </Column>
       </Row>

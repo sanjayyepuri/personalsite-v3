@@ -7,57 +7,55 @@ module.exports = {
   plugins: [
     "gatsby-plugin-theme-ui",
     `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/content/posts`,
-        name: "posts"
+        name: "posts",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: "assets"
+        name: "assets",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/resume`,
-        name: `resume`
+        name: `resume`,
       },
     },
+    "gatsby-remark-images",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: [".md", ".mdx"],
         gatsbyRemarkPlugins: [
-          `gatsby-remark-katex`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {}
-          }
+          "gatsby-remark-images",
+          "gatsby-remark-prismjs",
         ],
-        remarkPlugins: [require(`remark-math`), require(`remark-html-katex`)],
-      }
+        remarkPlugins: [
+          require("remark-math"),
+          require("remark-html-katex")
+        ]
+      },
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         typekit: {
-          id: process.env.TYPEKIT_ID
-        }
-      }
+          id: process.env.TYPEKIT_ID,
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingIds: [
-          "UA-127947585-1"
-        ]
-      }
-    }
+        trackingIds: ["UA-127947585-1"],
+      },
+    },
   ],
 };

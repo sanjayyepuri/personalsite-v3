@@ -3,7 +3,7 @@ import * as React from "react"
 // load fonts and css
 import "@carbonplan/components/globals.css"
 // import "@carbonplan/components/fonts.css"
-import "katex/dist/katex.min.css"
+// import "katex/dist/katex.min.css"
 
 // components
 import Layout from "../components/layout"
