@@ -49,7 +49,6 @@ const Navbar = () => (
         </Link>
       </Heading>
       <Box sx={{ mx: "auto" }}></Box>
-      <Navlink to="/"> Home </Navlink>
       <Navlink to="/about"> About </Navlink>
       <Navlink
         external={true}
