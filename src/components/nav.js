@@ -49,7 +49,7 @@ const Navbar = () => (
         </Link>
       </Heading>
       <Box sx={{ mx: "auto" }}></Box>
-      <Navlink to="/about"> About </Navlink>
+      <Navlink to="/blog"> Blog </Navlink>
       <Navlink
         external={true}
         to="https://drive.google.com/file/d/1OEg4nZAnqHKTMuYdlVuYouBxQqgOX9k0/view"

@@ -56,7 +56,7 @@ const Footer = () => (
             </Themed.a>
           </Box>
         </Column>
-        <Column start={[1, 7, 8, 8]} width={[2, 3]} sx={{ mt: [3, 0, 0, 0] }}>
+        {/* <Column start={[1, 7, 8, 8]} width={[2, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Label>LINKEDIN</Label>
             <Themed.a
@@ -66,7 +66,7 @@ const Footer = () => (
               linkedin.com/in/sanjay-yepuri/
             </Themed.a>
           </Box>
-        </Column>
+        </Column> */}
       </Row>
     </Box>
     <Row sx={{ mb: ["2px"], mt: [5, 5, 4] }}>
