@@ -52,7 +52,7 @@ const Intro = () => (
           </Text>
 
           <Box mt={[4]}>
-            <Link to={"/"}>
+            <Link to={"/blog"}>
               <ArrowButton sx={{ color: "grey" }} size="md" > Blog </ArrowButton>
             </Link>
           </Box>
