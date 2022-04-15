@@ -1,13 +1,13 @@
-import theme from "@carbonplan/theme";
+const theme = require("@carbonplan/theme");
 
 const Theme = {
   ...theme,
   fonts: {
-    body: "relative-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
-    faux: "relative-faux-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
+    body: "Lexend, relative-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
+    faux: "Lexend, relative-faux-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
     heading:
-      "relative-medium-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
-    mono: 'relative-mono-11-pitch-pro, "Fira Code", monospace',
+      "Lexend, relative-medium-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
+    mono: '"Fira Code", relative-mono-11-pitch-pro, "Fira Code", monospace',
   },
   fontWeights: {
     body: 300,
@@ -19,4 +19,4 @@ const Theme = {
   },
 };
 
-export default Theme;
+module.exports = Theme;

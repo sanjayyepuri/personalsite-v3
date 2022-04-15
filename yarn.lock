@@ -1784,6 +1784,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/fira-code@npm:^4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/fira-code@npm:4.5.8"
+  checksum: d7626cfb5290ce57a692ae9267638e7d9948e1bc869850c356b4ef71c9d610f75f8e7c86d912cfbed9875df24b9d5f7bf188d68ed18b8a111b414cb2f5c4faa6
+  languageName: node
+  linkType: hard
+
+"@fontsource/lexend@npm:^4.5.7":
+  version: 4.5.7
+  resolution: "@fontsource/lexend@npm:4.5.7"
+  checksum: 3f125624a18890b9ef0b3f16f96e2d60063d2bfcd085187312a2b54567ddda9529373a34a88dd8e72c886c7c985fa239578f5803595588097e6b04649c7293d8
+  languageName: node
+  linkType: hard
+
 "@gatsbyjs/reach-router@npm:^1.3.6":
   version: 1.3.6
   resolution: "@gatsbyjs/reach-router@npm:1.3.6"
@@ -14900,6 +14914,8 @@ fsevents@^1.2.7:
     "@carbonplan/components": ^8.0.0
     "@carbonplan/prism": ^1.0.3
     "@carbonplan/theme": ^6.0.1
+    "@fontsource/fira-code": ^4.5.8
+    "@fontsource/lexend": ^4.5.7
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
     gatsby: ^3.9.1

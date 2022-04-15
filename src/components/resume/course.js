@@ -4,9 +4,9 @@ import { Row, Column } from "@carbonplan/components";
 
 const CourseList = [
   "Stochastic Processes",
-  "Real Analysis",
   "Mathematical Statistics",
   "Predictive Analytics",
+  "Real Analysis",
   "Algebraic Structures",
   "Neural Networks",
   "Computer Vision",

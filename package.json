@@ -19,6 +19,8 @@
     "@carbonplan/components": "^8.0.0",
     "@carbonplan/prism": "^1.0.3",
     "@carbonplan/theme": "^6.0.1",
+    "@fontsource/fira-code": "^4.5.8",
+    "@fontsource/lexend": "^4.5.7",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^3.9.1",
