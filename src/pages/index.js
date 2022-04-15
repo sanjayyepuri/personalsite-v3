@@ -20,9 +20,9 @@ const AboutPage = () => {
     <Layout mode="mouse">
       <Box mt={[1, 2]} mb={[1, 2, 2, 2]}>
         <Intro />
+        <CourseWork />
         <Experience />
         <Projects />
-        <CourseWork />
       </Box>
     </Layout>
   );
