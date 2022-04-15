@@ -1791,10 +1791,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/ibm-plex-sans-condensed@npm:^4.5.7":
+  version: 4.5.7
+  resolution: "@fontsource/ibm-plex-sans-condensed@npm:4.5.7"
+  checksum: b5c2436cb6651af724ca594a2e917fb57ce34daa59e3206855cad5e69d7f704860cf24bf0e34f844355eb394c2f298412db45e14e869266d76614e093149d91a
+  languageName: node
+  linkType: hard
+
 "@fontsource/lexend@npm:^4.5.7":
   version: 4.5.7
   resolution: "@fontsource/lexend@npm:4.5.7"
   checksum: 3f125624a18890b9ef0b3f16f96e2d60063d2bfcd085187312a2b54567ddda9529373a34a88dd8e72c886c7c985fa239578f5803595588097e6b04649c7293d8
+  languageName: node
+  linkType: hard
+
+"@fontsource/rubik@npm:^4.5.6":
+  version: 4.5.6
+  resolution: "@fontsource/rubik@npm:4.5.6"
+  checksum: 6f657c894759dbd7a46d430595756c4a4dcd2189697f99bcd17fd5687540e5286ed374b0b2d83553e0c8a357faf9877d0de89e4f81090d05f3f40712c21ea00c
   languageName: node
   linkType: hard
 
@@ -14915,7 +14929,9 @@ fsevents@^1.2.7:
     "@carbonplan/prism": ^1.0.3
     "@carbonplan/theme": ^6.0.1
     "@fontsource/fira-code": ^4.5.8
+    "@fontsource/ibm-plex-sans-condensed": ^4.5.7
     "@fontsource/lexend": ^4.5.7
+    "@fontsource/rubik": ^4.5.6
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
     gatsby: ^3.9.1

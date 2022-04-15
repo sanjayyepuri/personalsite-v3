@@ -3,10 +3,10 @@ const theme = require("@carbonplan/theme");
 const Theme = {
   ...theme,
   fonts: {
-    body: "Lexend, relative-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
-    faux: "Lexend, relative-faux-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
+    body: "Rubik, relative-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
+    faux: "'IBM Plex Sans Condensed', relative-faux-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
     heading:
-      "Lexend, relative-medium-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
+      "Rubik, relative-medium-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
     mono: '"Fira Code", relative-mono-11-pitch-pro, "Fira Code", monospace',
   },
   fontWeights: {
