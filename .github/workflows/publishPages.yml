@@ -19,7 +19,6 @@ jobs:
           cache: yarn
 
       - name: Build
-        env: 
         run: | 
           yarn
           yarn build
