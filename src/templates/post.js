@@ -29,7 +29,7 @@ const Post = ({ data }) => {
               pt: [2, 2, 2, 2],
             }}
           >
-            <Link to={"/"}>
+            <Link to={"/blog"}>
               <Button prefix={<Left />}>Back</Button>
             </Link>
           </Box>

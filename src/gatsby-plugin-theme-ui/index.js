@@ -7,7 +7,7 @@ const Theme = {
     faux: "'IBM Plex Sans Condensed', relative-faux-book-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
     heading:
       "Rubik, relative-medium-pro, stolzl, system-ui, -apple-system, BlinkMacSystemFont",
-    mono: '"Fira Code", relative-mono-11-pitch-pro, "Fira Code", monospace',
+    mono: '"Jetbrains Mono", relative-mono-11-pitch-pro, "Fira Code", monospace',
   },
   fontWeights: {
     body: 300,

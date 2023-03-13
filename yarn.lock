@@ -1798,6 +1798,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/jetbrains-mono@npm:^4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/jetbrains-mono@npm:4.5.8"
+  checksum: 0992e488220b61b5c29f3b77f2eb83a3e1bda72623ab982cb6c30df68e21e3ffecc93cf51bc6f8d0ed1fd93f641d263591fee36647e16f779d694c98229cc536
+  languageName: node
+  linkType: hard
+
 "@fontsource/lexend@npm:^4.5.7":
   version: 4.5.7
   resolution: "@fontsource/lexend@npm:4.5.7"
@@ -14930,6 +14937,7 @@ fsevents@^1.2.7:
     "@carbonplan/theme": ^6.0.1
     "@fontsource/fira-code": ^4.5.8
     "@fontsource/ibm-plex-sans-condensed": ^4.5.7
+    "@fontsource/jetbrains-mono": ^4.5.8
     "@fontsource/lexend": ^4.5.7
     "@fontsource/rubik": ^4.5.6
     "@mdx-js/mdx": ^1.6.22

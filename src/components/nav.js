@@ -39,12 +39,12 @@ const Navbar = () => (
       <Heading
         sx={{
           fontWeight: "bold",
-          fontSize: [5, 5, 5, 6],
+          fontSize: [4, 4, 4, 4],
         }}
       >
         <Link to={"/"}>
           <Text sx={{ color: "primary" }}>
-            <Text sx={{ color: "blue" }}>Sai</Text> Sanjay Yepuri{" "}
+            <Text sx={{ fontFamily: "mono", fontSpacing:"mono", color: "blue" }}>sanjay</Text> {" "}
           </Text>
         </Link>
       </Heading>

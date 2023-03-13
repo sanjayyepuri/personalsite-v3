@@ -5,8 +5,8 @@ module.exports = {
     title: "personal-site",
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-theme-ui",
     {
       resolve: "gatsby-source-filesystem",
       options: {
